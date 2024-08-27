@@ -1,0 +1,4 @@
+mkdir -p notes/class8 notes/class9 notes/class10
+touch notes/class8/english.html notes/class8/malayalam1.html notes/class8/malayalam2.html notes/class8/maths.html notes/class8/social_science.html notes/class8/biology.html notes/class8/chemistry.html notes/class8/physics.html notes/class8/it.html
+touch notes/class9/english.html notes/class9/malayalam1.html notes/class9/malayalam2.html notes/class9/maths.html notes/class9/social_science.html notes/class9/biology.html notes/class9/chemistry.html notes/class9/physics.html notes/class9/it.html
+touch notes/class10/english.html notes/class10/malayalam1.html notes/class10/malayalam2.html notes/class10/maths.html notes/class10/social_science.html notes/class10/biology.html notes/class10/chemistry.html notes/class10/physics.html notes/class10/it.html

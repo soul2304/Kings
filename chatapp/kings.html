@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Tuition Centre</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image:url(89ee9595def9b9c8aee8cd483ca543b9.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .content {
+            z-index: 10;
+            position: relative;
+        }
+
+        .selection {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="flex flex-col items-center justify-center h-full content">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Kings Private Tuition Centre</h1>
+        <div class="selection">
+            <label for="classSelect" class="block text-lg md:text-xl mb-2">Select Class:</label>
+            <select id="classSelect" class="block w-full p-2 mb-4 text-black">
+                <option value="8">Class 8</option>
+                <option value="9">Class 9</option>
+                <option value="10">Class 10</option>
+            </select>
+            <label for="subjectSelect" class="block text-lg md:text-xl mb-2">Select Subject:</label>
+            <select id="subjectSelect" class="block w-full p-2 mb-4 text-black">
+                <option value="english">English</option>
+                <option value="malayalam1">Malayalam I</option>
+                <option value="malayalam2">Malayalam II</option>
+                <option value="maths">Maths</option>
+                <option value="social_science">Social Science</option>
+                <option value="hindi">Hindi</option>
+                <option value="biology">Biology</option>
+                <option value="chemistry">Chemistry</option>
+                <option value="physics">Physics</option>
+            </select>
+            <button id="viewNotes" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">View Notes</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('viewNotes').addEventListener('click', function() {
+            const selectedClass = document.getElementById('classSelect').value;
+            const selectedSubject = document.getElementById('subjectSelect').value;
+    
+            // Construct the URL for the notes page
+            const url = `notes/class${selectedClass}/${selectedSubject}.html`;
+    
+            // Redirect to the constructed URL
+            window.location.href = url;
+        });
+    </script>
+    
+</body>
+</html>
